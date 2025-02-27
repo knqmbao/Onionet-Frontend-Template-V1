@@ -9,7 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "@/components/navbar-components/sidebar";
 
 import { NavUser } from "@/components/nav-user"; // Keeps user profile
 
@@ -29,7 +29,8 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar
-      className="top-[--header-height] !h-[calc(100svh-var(--header-height))] border-2 border-red-500"
+      className="top-[--header-height] !h-[calc(100svh-var(--header-height))]  border-2 border-blue-500"
+      // border-2 border-red-500
       {...props}
     >
       {/* Sidebar Header */}
@@ -37,7 +38,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
+              <a href="#">  
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                   <LayoutDashboard className="size-4" />
                 </div>

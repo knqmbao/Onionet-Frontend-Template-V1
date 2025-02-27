@@ -18,6 +18,7 @@ const mainWindow = new BrowserWindow({
       nodeIntegration: true, // Allows using Node.js modules in renderer process
       contextIsolation: false, // Disable context isolation for easier access
       devTools: isDev(), // Enable DevTools in development mode
+     
     },
     
 });

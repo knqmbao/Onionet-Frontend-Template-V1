@@ -1,6 +1,6 @@
-import { SidebarIcon } from "lucide-react"
+import { SidebarIcon } from "lucide-react";
 
-import { SearchForm } from "@/components/search-form"
+import { SearchForm } from "@/components/search-form";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,17 +8,17 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { useSidebar } from "@/components/ui/sidebar"
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { useSidebar } from "@/components/navbar-components/sidebar";
 
 export function SiteHeader() {
-  const { toggleSidebar } = useSidebar()
+  const { toggleSidebar } = useSidebar();
 
   return (
-    <header className="fle sticky top-0 z-50 w-full items-center border-b bg-background">
-      <div className="flex h-[--header-height] w-full items-center gap-2 px-4">
+    <header className="sticky top-0 z-50 w-full border-b bg-background border-2  border-purple-500">
+      <div className="flex h-[--header-height] items-center gap-2 px-4 overflow-hidden">
         <Button
           className="h-8 w-8"
           variant="ghost"
@@ -44,5 +44,5 @@ export function SiteHeader() {
         <SearchForm className="w-full sm:ml-auto sm:w-auto" />
       </div>
     </header>
-  )
+  );
 }
